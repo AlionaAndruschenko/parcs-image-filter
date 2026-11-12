@@ -1,0 +1,18 @@
+# Перевірені версії для PARCS-Python на Python 2.7 (новіші не підтримують Python 2)
+Pyro4==4.82
+serpent==1.28
+selectors34==1.2
+six==1.17.0
+netifaces==0.11.0
+py-cpuinfo==4.0.0
+Flask==1.1.4
+Werkzeug==1.0.1
+Jinja2==2.11.3
+MarkupSafe==1.1.1
+itsdangerous==1.1.0
+click==7.1.2
+requests==2.27.1
+urllib3==1.26.20
+idna==2.10
+chardet==4.0.0
+certifi==2019.11.28

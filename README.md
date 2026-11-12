@@ -48,16 +48,16 @@ r g b r g b ...
 ## Швидкий старт у Google Cloud (Cloud Shell)
 
 ```bash
-git clone https://github.com/<твій-логін>/parcs-image-filter && cd parcs-image-filter
+git clone https://github.com/Alionaandruschenko/parcs-image-filter && cd parcs-image-filter
 gcloud projects create parcs-blur-andrushchenko      # або існуючий проєкт; прив'яжи billing у консолі
-PROJECT_ID=parcs-blur-andrushchenko MY_IP=<твій IP з ifconfig.me> bash cloud/setup_gcp.sh
+PROJECT_ID=parcs-blur-andrushchenko MY_IP=<мій IP> bash cloud/setup_gcp.sh
 # почекати 3-5 хв, відкрити http://<MASTER_EXTERNAL_IP>:8080/workers  -> має бути 4 воркери
 
 pip install --user pillow requests matplotlib
 python3 tools/run_benchmark.py --master http://<MASTER_EXTERNAL_IP>:8080 --size 7 --sigma 2.0 --repeats 3
 python3 tools/plot_results.py results/results.csv results/chart.png
 
-bash cloud/teardown_gcp.sh                            # після здачі!
+bash cloud/teardown_gcp.sh                           
 ```
 
 Ручний запуск через веб-інтерфейс: `Add Job` → solution = `solver.py`, input = файл з `tools/make_input.py`.
